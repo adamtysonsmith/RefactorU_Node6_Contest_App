@@ -12,3 +12,54 @@ h2 {
     width: 200px;
     float: left;
 }
+.submit-entry {
+    float: right;
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+.winner {
+    margin-top: 20px;
+    width: 100%;
+    height: 550px;
+}
+.winner-title, .contender-title {
+    margin-top: 0;
+}
+.winner-details, .contender-details {
+    background-color: #ebebeb;
+    padding: 20px 30px;
+}
+.winner-description, .contender-description {
+    font-size: 16px;
+}
+.winner-submitted-by, .contender-submitted-by {
+    color: dimgray;
+    font-size: smaller;
+}
+.winner-current-votes, .contender-current-votes {
+    float: right;
+    font-size: 26px;
+    color: #114e89;
+    margin-top: -8px;
+}
+.vote {
+   margin-top: 10px; 
+}
+
+
+.contender {
+    margin-top: 20px;
+    height: 350px;
+    width: 100%;
+}
+.contender-title {
+    font-size: 20px;
+}
+.contender-description {
+    font-size: 14px;
+}
+.contender-current-votes {
+    font-size: 18px;
+    margin-top: -2px;
+}

@@ -2,6 +2,63 @@ extends layout
 
 block content
     div.container
-        img.sloth(src="/img/sloth.png" width="200px")
+        button(data-toggle="modal" data-target="#newEntry").btn.btn-info.submit-entry Submit an Entry!
+        img.sloth(src="/img/sloth.png")
         h1 The Best of
         h2 The Daily Awww..
+        p Insert today's date
+        
+        iframe(src="https://www.youtube.com/embed/svL62PpJjkY" frameborder="0").winner
+        div.winner-details
+            p.winner-current-votes 458 Votes
+            h3.winner-title Epic Bunny's Adventure
+            p.winner-description Epic Bunny is tasked to go an an epic quest to deliver a magical orb to the Great Kitty Wizard.
+            p.winner-submitted-by Submitted by Adam
+            
+            button.btn.btn-primary.vote Cast Your Vote!
+            
+        div.row
+            div.col-md-6.col-sm-12
+                iframe(src="https://www.youtube.com/embed/svL62PpJjkY" frameborder="0").contender
+                div.contender-details
+                    p.contender-current-votes 458 Votes
+                    h3.contender-title Epic Bunny's Adventure
+                    p.contender-description Epic Bunny is tasked to go an an epic quest to deliver a magical orb to the Great Kitty Wizard.
+                    p.contender-submitted-by Submitted by Adam
+            
+                    button.btn.btn-primary.vote Cast Your Vote!
+            
+            div.col-md-6.col-sm-12
+                iframe(src="https://www.youtube.com/embed/svL62PpJjkY" frameborder="0").contender
+                div.contender-details
+                    p.contender-current-votes 458 Votes
+                    h3.contender-title Epic Bunny's Adventure
+                    p.contender-description Epic Bunny is tasked to go an an epic quest to deliver a magical orb to the Great Kitty Wizard.
+                    p.contender-submitted-by Submitted by Adam
+            
+                    button.btn.btn-primary.vote Cast Your Vote!
+    
+    // New Entry Modal
+    div(tabindex="-1" role="dialog" aria-labelledby="myModalLabel").modal.fade#newEntry
+        div(role="document").modal-dialog
+            div.modal-content
+                div.modal-header
+                    button(type="button" data-dismiss="modal" aria-label="Close").close 
+                        span(aria-hidden="true")
+                    h4.modal-title#myModalLabel Submit a New Entry
+                div.modal-body
+                    div.form-group
+                        label Name
+                        input(type="text" placeholder="Your Name").form-control
+                    div.form-group
+                        label YouTube Embed URL
+                        input(type="text" placeholder="YouTube Embed URL").form-control
+                    div.form-group
+                        label Video Title
+                        input(type="text" placeholder="Video Title").form-control
+                    div.form-group
+                        label Video Description
+                        input(type="text" placeholder="Video Description").form-control
+                div.modal-footer
+                    button(type="button" data-dismiss="modal").btn.btn-default Cancel
+                    button(type="button").btn.btn-primary Submit!
